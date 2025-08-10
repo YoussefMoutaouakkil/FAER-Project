@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>FAER Formation Conseil - Formation QHSE et RSE</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Formation QHSE, Conseil RSE, Qualité Sécurité Hygiène" name="keywords">
+    <meta content="FAER Formation Conseil - Accompagnement QHSE et RSE pour TPE, PME et industriels" name="description">
+
+    <!-- Favicon -->
+    <link href="assets/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/assets/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark">
+        <div class="row py-2 px-lg-5">
+            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center text-white">
+                    <small><i class="fa fa-phone-alt mr-2"></i>+33 6 XX XX XX XX</small>
+                    <small class="px-3">|</small>
+                    <small><i class="fa fa-envelope mr-2"></i>contact@faer-formation.fr</small>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-white pl-2" href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand ml-lg-3">
+                 <img style="width: 200px;" src="logoFaer.png" alt="">
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mx-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">Accueil</a>
+                    <a href="about.html" class="nav-item nav-link">À Propos</a>
+                    <a href="course.html" class="nav-item nav-link">Formations</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="detail.html" class="dropdown-item">Détail Formation</a>
+                            <a href="feature.html" class="dropdown-item">Nos Expertises</a>
+                            <a href="team.html" class="dropdown-item">Notre Équipe</a>
+                            <a href="testimonial.html" class="dropdown-item">Témoignages</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-inline-flex align-items-center">
+                    <!-- Authentication buttons (shown when not logged in) -->
+                    <div id="auth-buttons">
+                        <a href="login.html" class="btn btn-outline-primary py-2 px-4 mr-2">Connexion</a>
+                        <a href="signup.html" class="btn btn-primary py-2 px-4">Inscription</a>
+                    </div>
+                    
+                    <!-- User menu (shown when logged in) -->
+                    <div id="user-menu" style="display: none;">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user mr-2"></i><span id="user-name">Mon Compte</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#" id="dashboard-btn">
+                                    <i class="fa fa-tachometer-alt mr-2"></i>Tableau de Bord
+                                </a>
+                                <a class="dropdown-item" href="#" id="profile-btn">
+                                    <i class="fa fa-user-circle mr-2"></i>Mon Profil
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" id="logout-btn">
+                                    <i class="fa fa-sign-out-alt mr-2"></i>Déconnexion
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 90px;">
+        <div class="container text-center my-5 py-5">
+            <h1 class="text-white mt-4 mb-4">Formation et Conseil QHSE</h1>
+            <h1 class="text-white display-1 mb-5">L'Humain au Cœur de vos Démarches</h1>
+            <div class="mx-auto mb-5" style="width: 100%; max-width: 600px;">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-light bg-white text-body px-4 dropdown-toggle" type="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Formations</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">QHSE</a>
+                            <a class="dropdown-item" href="#">RSE</a>
+                            <a class="dropdown-item" href="#">Hygiène</a>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control border-light" style="padding: 30px 25px;" placeholder="Rechercher une formation">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary px-4 px-lg-5">Rechercher</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="assets/img/about.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="section-title position-relative mb-4">
+                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">À Propos de FAER</h6>
+                        <h1 class="display-4">L'Humain et le Terrain au Cœur de nos Démarches</h1>
+                    </div>
+                    <p>FAER FORMATION CONSEIL est née d'un virage de vie et d'une conviction forte : remettre l'humain et le terrain au cœur des démarches Qualité, Sécurité, Hygiène et RSE.</p>
+                    <p>En 2020, en pleine crise sanitaire, Aurélia MAXIMIN, forte de 15 ans d'expérience en QHSE, crée FAER pour répondre à une question essentielle : "Et si on faisait autrement ?"</p>
+                    <p>Depuis, FAER accompagne les TPE, PME, centres de formation et industriels avec une approche pédagogique, opérationnelle et sur-mesure.</p>
+                    <div class="row pt-3 mx-0">
+                        <div class="col-3 px-0">
+                            <div class="bg-success text-center p-4">
+                                <h1 class="text-white" data-toggle="counter-up">50</h1>
+                                <h6 class="text-uppercase text-white">Formations<span class="d-block">Disponibles</span></h6>
+                            </div>
+                        </div>
+                        <div class="col-3 px-0">
+                            <div class="bg-primary text-center p-4">
+                                <h1 class="text-white" data-toggle="counter-up">200</h1>
+                                <h6 class="text-uppercase text-white">Entreprises<span class="d-block">Accompagnées</span></h6>
+                            </div>
+                        </div>
+                        <div class="col-3 px-0">
+                            <div class="bg-secondary text-center p-4">
+                                <h1 class="text-white" data-toggle="counter-up">15</h1>
+                                <h6 class="text-uppercase text-white">Années<span class="d-block">d'Expérience</span></h6>
+                            </div>
+                        </div>
+                        <div class="col-3 px-0">
+                            <div class="bg-warning text-center p-4">
+                                <h1 class="text-white" data-toggle="counter-up">500</h1>
+                                <h6 class="text-uppercase text-white">Stagiaires<span class="d-block">Formés</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid bg-image" style="margin: 90px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 my-5 pt-5 pb-lg-5">
+                    <div class="section-title position-relative mb-4">
+                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Pourquoi Choisir FAER ?</h6>
+                        <h1 class="display-4">Nos Engagements et Valeurs</h1>
+                    </div>
+                    <p class="mb-4 pb-2">Former, conseiller et outiller les organisations pour qu'elles intègrent durablement la qualité, la sécurité, la RSE, la conformité et l'hygiène dans leur quotidien.</p>
+                    <div class="d-flex mb-3">
+                        <div class="btn-icon bg-primary mr-4">
+                            <i class="fa fa-2x fa-heart text-white"></i>
+                        </div>
+                        <div class="mt-n1">
+                            <h4>Bienveillance Exigeante</h4>
+                            <p>Nous créons des outils simples, compris et utilisés, en valorisant les femmes et les hommes derrière chaque démarche.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <div class="btn-icon bg-secondary mr-4">
+                            <i class="fa fa-2x fa-sync-alt text-white"></i>
+                        </div>
+                        <div class="mt-n1">
+                            <h4>Adaptabilité</h4>
+                            <p>Nous favorisons le passage à l'action par des audits, diagnostics et formations utiles et personnalisés.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="btn-icon bg-warning mr-4">
+                            <i class="fa fa-2x fa-lightbulb text-white"></i>
+                        </div>
+                        <div class="mt-n1">
+                            <h4>Agilité Pédagogique</h4>
+                            <p class="m-0">Une approche pédagogique, opérationnelle et sur-mesure pour faire des obligations réglementaires de véritables leviers de transformation positive.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="assets/img/feature.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature Start -->
+
+
+    <!-- Courses Start -->
+    <div class="container-fluid px-0 py-5">
+        <div class="row mx-0 justify-content-center pt-5">
+            <div class="col-lg-6">
+                <div class="section-title text-center position-relative mb-4">
+                    <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Nos Formations</h6>
+                    <h1 class="display-4">Découvrez Nos Formations QHSE</h1>
+                </div>
+            </div>
+        </div>
+        <div class="owl-carousel courses-carousel">
+            <div class="courses-item position-relative">
+                <img class="img-fluid" src="assets/img/courses-1.jpg" alt="">
+                <div class="courses-text">
+                    <h4 class="text-center text-white px-3">Formation Qualité Sécurité Hygiène pour débutants</h4>
+                    <div class="border-top w-100 mt-3">
+                        <div class="d-flex justify-content-between p-4">
+                            <span class="text-white"><i class="fa fa-user mr-2"></i>Aurélia MAXIMIN</span>
+                            <span class="text-white"><i class="fa fa-star mr-2"></i>4.8 <small>(150)</small></span>
+                        </div>
+                    </div>
+                    <div class="w-100 bg-white text-center p-4">
+                        <a class="btn btn-primary" href="detail.html">Détails Formation</a>
+                    </div>
+                </div>
+            </div>
+            <div class="courses-item position-relative">
+                <img class="img-fluid" src="assets/img/courses-2.jpg" alt="">
+                <div class="courses-text">
+                    <h4 class="text-center text-white px-3">Formation QHSE Avancée</h4>
+                    <div class="border-top w-100 mt-3">
+                        <div class="d-flex justify-content-between p-4">
+                            <span class="text-white"><i class="fa fa-user mr-2"></i>Aurélia MAXIMIN</span>
+                            <span class="text-white"><i class="fa fa-star mr-2"></i>4.8 <small>(150)</small></span>
+                        </div>
+                    </div>
+                    <div class="w-100 bg-white text-center p-4" >
+                        <a class="btn btn-primary" href="detail.html">Détails Formation</a>
+                    </div>
+                </div>
+            </div>
+            <div class="courses-item position-relative">
+                <img class="img-fluid" src="assets/img/courses-3.jpg" alt="">
+                <div class="courses-text">
+                    <h4 class="text-center text-white px-3">Formation RSE pour Débutants</h4>
+                    <div class="border-top w-100 mt-3">
+                        <div class="d-flex justify-content-between p-4">
+                            <span class="text-white"><i class="fa fa-user mr-2"></i>Aurélia MAXIMIN</span>
+                            <span class="text-white"><i class="fa fa-star mr-2"></i>4.8 <small>(150)</small></span>
+                        </div>
+                    </div>
+                    <div class="w-100 bg-white text-center p-4" >
+                        <a class="btn btn-primary" href="detail.html">Détails Formation</a>
+                    </div>
+                </div>
+            </div>
+            <div class="courses-item position-relative">
+                <img class="img-fluid" src="assets/img/courses-4.jpg" alt="">
+                <div class="courses-text">
+                    <h4 class="text-center text-white px-3">Formation RSE Avancée</h4>
+                    <div class="border-top w-100 mt-3">
+                        <div class="d-flex justify-content-between p-4">
+                            <span class="text-white"><i class="fa fa-user mr-2"></i>Aurélia MAXIMIN</span>
+                            <span class="text-white"><i class="fa fa-star mr-2"></i>4.8 <small>(150)</small></span>
+                        </div>
+                    </div>
+                    <div class="w-100 bg-white text-center p-4" >
+                        <a class="btn btn-primary" href="detail.html">Détails Formation</a>
+                    </div>
+                </div>
+            </div>
+            <div class="courses-item position-relative">
+                <img class="img-fluid" src="assets/img/courses-5.jpg" alt="">
+                <div class="courses-text">
+                    <h4 class="text-center text-white px-3">Formation Hygiène et Sécurité Alimentaire</h4>
+                    <div class="border-top w-100 mt-3">
+                        <div class="d-flex justify-content-between p-4">
+                            <span class="text-white"><i class="fa fa-user mr-2"></i>Aurélia MAXIMIN</span>
+                            <span class="text-white"><i class="fa fa-star mr-2"></i>4.8 <small>(150)</small></span>
+                        </div>
+                    </div>
+                    <div class="w-100 bg-white text-center p-4" >
+                        <a class="btn btn-primary" href="detail.html">Détails Formation</a>
+                    </div>
+                </div>
+            </div>
+            <div class="courses-item position-relative">
+                <img class="img-fluid" src="assets/img/courses-6.jpg" alt="">
+                <div class="courses-text">
+                    <h4 class="text-center text-white px-3">Formation Management QHSE</h4>
+                    <div class="border-top w-100 mt-3">
+                        <div class="d-flex justify-content-between p-4">
+                            <span class="text-white"><i class="fa fa-user mr-2"></i>Aurélia MAXIMIN</span>
+                            <span class="text-white"><i class="fa fa-star mr-2"></i>4.8 <small>(150)</small></span>
+                        </div>
+                    </div>
+                    <div class="w-100 bg-white text-center p-4" >
+                        <a class="btn btn-primary" href="detail.html">Détails Formation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center bg-image mx-0 mb-5">
+            <div class="col-lg-6 py-5">
+                <div class="bg-white p-5 my-5">
+                    <h1 class="text-center mb-4">Accompagnement Personnalisé</h1>
+                    <form>
+                        <div class="form-row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Votre Nom" style="padding: 30px 20px;">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control bg-light border-0" placeholder="Votre Email" style="padding: 30px 20px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <select class="custom-select bg-light border-0 px-3" style="height: 60px;">
+                                        <option selected>Choisir une formation</option>
+                                        <option value="1">Formation QHSE</option>
+                                        <option value="2">Formation RSE</option>
+                                        <option value="3">Formation Hygiène</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn btn-primary btn-block" type="submit" style="height: 60px;">Demander Informations</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
+
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative mb-5">
+                <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Notre Équipe</h6>
+                <h1 class="display-4">Rencontrez Nos Experts</h1>
+            </div>
+            <div class="owl-carousel team-carousel position-relative" style="padding: 0 30px;">
+                <div class="team-item">
+                    <img class="img-fluid w-100" src="assets/img/team-1.jpg" alt="">
+                    <div class="bg-light text-center p-4">
+                        <h5 class="mb-3">Aurélia MAXIMIN</h5>
+                        <p class="mb-2">Experte QHSE</p>
+                        <div class="d-flex justify-content-center">
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <img class="img-fluid w-100" src="assets/img/team-2.jpg" alt="">
+                    <div class="bg-light text-center p-4">
+                        <h5 class="mb-3">Jean Dupont</h5>
+                        <p class="mb-2">Consultant RSE</p>
+                        <div class="d-flex justify-content-center">
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <img class="img-fluid w-100" src="assets/img/team-3.jpg" alt="">
+                    <div class="bg-light text-center p-4">
+                        <h5 class="mb-3">Marie Curie</h5>
+                        <p class="mb-2">Formatrice Hygiène</p>
+                        <div class="d-flex justify-content-center">
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <img class="img-fluid w-100" src="assets/img/team-4.jpg" alt="">
+                    <div class="bg-light text-center p-4">
+                        <h5 class="mb-3">Pierre Martin</h5>
+                        <p class="mb-2">Auditeur Qualité</p>
+                        <div class="d-flex justify-content-center">
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid bg-image py-5" style="margin: 90px 0;">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <div class="section-title position-relative mb-4">
+                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Témoignages</h6>
+                        <h1 class="display-4">Ce Que Disent Nos Stagiaires</h1>
+                    </div>
+                    <p class="m-0">Dolor est dolores et nonumy sit labore dolores est sed rebum amet, justo duo ipsum sanctus dolore magna rebum sit et. Diam lorem ea sea at. Nonumy et at at sed justo est nonumy tempor. Vero sea ea eirmod, elitr ea amet diam ipsum at amet. Erat sed stet eos ipsum diam</p>
+                </div>
+                <div class="col-lg-7">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="bg-white p-5">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <p>Sed et elitr ipsum labore dolor diam, ipsum duo vero sed sit est est ipsum eos clita est ipsum. Est nonumy tempor at kasd. Sed at dolor duo ut dolor, et justo erat dolor magna sed stet amet elitr duo lorem</p>
+                            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+                                <img class="img-fluid mr-4" src="assets/img/testimonial-2.jpg" alt="">
+                                <div>
+                                    <h5>Student Name</h5>
+                                    <span>Web Design</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <p>Sed et elitr ipsum labore dolor diam, ipsum duo vero sed sit est est ipsum eos clita est ipsum. Est nonumy tempor at kasd. Sed at dolor duo ut dolor, et justo erat dolor magna sed stet amet elitr duo lorem</p>
+                            <div class="d-flex flex-shrink-0 align-items-center mt-4">
+                                <img class="img-fluid mr-4" src="assets/img/testimonial-1.jpg" alt="">
+                                <div>
+                                    <h5>Student Name</h5>
+                                    <span>Web Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial Start -->
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <div class="bg-light d-flex flex-column justify-content-center px-5" style="height: 450px;">
+                        <div class="d-flex align-items-center mb-5">
+                            <div class="btn-icon bg-primary mr-4">
+                                <i class="fa fa-2x fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div class="mt-n1">
+                                <h4>Notre Localisation</h4>
+                                <p class="m-0">123 Rue, Paris, France</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-5">
+                            <div class="btn-icon bg-secondary mr-4">
+                                <i class="fa fa-2x fa-phone-alt text-white"></i>
+                            </div>
+                            <div class="mt-n1">
+                                <h4>Appelez-Nous</h4>
+                                <p class="m-0">+33 6 XX XX XX XX</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="btn-icon bg-warning mr-4">
+                                <i class="fa fa-2x fa-envelope text-white"></i>
+                            </div>
+                            <div class="mt-n1">
+                                <h4>Contactez-Nous</h4>
+                                <p class="m-0">contact@faer-formation.fr</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="section-title position-relative mb-4">
+                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Besoin d'Aide ?</h6>
+                        <h1 class="display-4">Envoyez-Nous un Message</h1>
+                    </div>
+                    <div class="contact-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-6 form-group">
+                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Votre Nom" required="required">
+                                </div>
+                                <div class="col-6 form-group">
+                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Votre Email" required="required">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Sujet" required="required">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Message" required="required"></textarea>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary py-3 px-5" type="submit">Envoyer le Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid position-relative overlay-top bg-dark text-white-50 py-5" style="margin-top: 90px;">
+        <div class="container mt-5 pt-5">
+            <div class="row">
+                <div class="col-md-6 mb-5">
+                    <a href="index.html" class="navbar-brand">
+                         <img width="200px" src="logoFaer.png" alt="">
+                    </a>
+                    <p class="m-0">FAER FORMATION CONSEIL accompagne les TPE, PME, centres de formation et industriels avec une approche pédagogique, opérationnelle et sur-mesure pour intégrer durablement la qualité, la sécurité, la RSE et l'hygiène.</p>
+                </div>
+                <div class="col-md-6 mb-5">
+                    <h3 class="text-white mb-4">Newsletter</h3>
+                    <div class="w-100">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Votre Adresse Email">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary px-4">S'inscrire</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-5">
+                    <h3 class="text-white mb-4">Nous Contacter</h3>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>France Métropolitaine</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+33 6 XX XX XX XX</p>
+                    <p><i class="fa fa-envelope mr-2"></i>contact@faer-formation.fr</p>
+                    <div class="d-flex justify-content-start mt-4">
+                        <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-twitter"></i></a>
+                        <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-facebook-f"></i></a>
+                        <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-linkedin-in"></i></a>
+                        <a class="text-white" href="#"><i class="fab fa-2x fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <h3 class="text-white mb-4">Nos Formations</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Formation QHSE</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Formation RSE</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Formation Hygiène</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Conseil & Audit</a>
+                        <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Accompagnement</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <h3 class="text-white mb-4">Liens Rapides</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Politique de Confidentialité</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Conditions Générales</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>FAQ</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Support</a>
+                        <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white-50 border-top py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0">Copyright &copy; <a class="text-white" href="#">FAER Formation Conseil</a>. Tous Droits Réservés.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <p class="m-0">Conçu par <a class="text-white" href="#">FAER</a> - Formation QHSE & RSE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/easing/easing.min.js"></script>
+    <script src="assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="assets/lib/counterup/counterup.min.js"></script>
+    <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Navbar Authentication Script -->
+    <script src="assets/js/navbar.js"></script>
+</body>
+
+</html>
