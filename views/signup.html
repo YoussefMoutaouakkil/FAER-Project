@@ -21,6 +21,9 @@
     <!-- Libraries Stylesheet -->
     <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Customized Bootstrap Stylesheet -->
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
@@ -301,7 +304,7 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="assets/lib/waypoints/waypoints.min.js"></script>
     <script src="assets/lib/counterup/counterup.min.js"></script>
@@ -319,10 +322,33 @@
             const signupBtn = document.getElementById('signupBtn');
             const originalText = signupBtn.innerHTML;
             
-            // Validate password confirmation
+            // Validate form fields
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirmPassword').value;
             
+            // Check required fields
+            if (!firstName || !lastName || !email || !password) {
+                showAlert('Veuillez remplir tous les champs obligatoires', 'danger');
+                return;
+            }
+            
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showAlert('Veuillez entrer une adresse email valide', 'danger');
+                return;
+            }
+            
+            // Validate password length
+            if (password.length < 6) {
+                showAlert('Le mot de passe doit contenir au moins 6 caractères', 'danger');
+                return;
+            }
+            
+            // Validate password confirmation
             if (password !== confirmPassword) {
                 showAlert('Les mots de passe ne correspondent pas', 'danger');
                 return;
@@ -334,10 +360,10 @@
                 signupBtn.disabled = true;
                 
                 const formData = {
-                    firstName: document.getElementById('firstName').value,
-                    lastName: document.getElementById('lastName').value,
-                    email: document.getElementById('email').value,
-                    phone: document.getElementById('phone').value,
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                    phone: document.getElementById('phone').value.trim(),
                     password: password
                 };
                 
@@ -375,7 +401,16 @@
                 
             } catch (error) {
                 console.error('Signup error:', error);
-                showAlert('Erreur lors de la création du compte. Veuillez réessayer.', 'danger');
+                let errorMessage = 'Erreur lors de la création du compte. Veuillez réessayer.';
+                
+                // Handle specific error cases
+                if (error.name === 'TypeError' && error.message.includes('fetch')) {
+                    errorMessage = 'Impossible de se connecter au serveur. Vérifiez que le serveur est démarré.';
+                } else if (error.message) {
+                    errorMessage = error.message;
+                }
+                
+                showAlert(errorMessage, 'danger');
             } finally {
                 // Reset button state
                 signupBtn.innerHTML = originalText;

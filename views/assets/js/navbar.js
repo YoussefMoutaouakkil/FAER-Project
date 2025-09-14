@@ -36,6 +36,14 @@ class NavbarAuth {
                 if (user && userName) {
                     userName.textContent = `${user.firstName} ${user.lastName}`;
                 }
+                
+                // Initialize Bootstrap dropdown after showing the menu
+                setTimeout(() => {
+                    const dropdownElement = userMenu.querySelector('.dropdown-toggle');
+                    if (dropdownElement && typeof $ !== 'undefined') {
+                        $(dropdownElement).dropdown();
+                    }
+                }, 100);
             }
         } else {
             // User is not logged in - show auth buttons
@@ -114,11 +122,48 @@ class NavbarAuth {
     refresh() {
         this.updateNavbar();
     }
+
+    // Test method to simulate logged in user (for debugging)
+    simulateLogin() {
+        localStorage.setItem('token', 'test-token');
+        localStorage.setItem('user', JSON.stringify({
+            firstName: 'Test',
+            lastName: 'User',
+            email: 'test@example.com'
+        }));
+        this.updateNavbar();
+    }
 }
 
 // Initialize navbar when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     window.navbarAuth = new NavbarAuth();
+    
+    // Initialize all Bootstrap dropdowns
+    if (typeof $ !== 'undefined') {
+        $('.dropdown-toggle').dropdown();
+    }
+    
+    // Add click handler for dropdown toggles as fallback
+    document.addEventListener('click', (e) => {
+        if (e.target.matches('.dropdown-toggle') || e.target.closest('.dropdown-toggle')) {
+            const dropdown = e.target.closest('.dropdown') || e.target.closest('.dropdown-toggle').closest('.dropdown');
+            const menu = dropdown.querySelector('.dropdown-menu');
+            
+            if (menu) {
+                // Toggle dropdown manually if Bootstrap doesn't work
+                const isShown = menu.classList.contains('show');
+                document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
+                
+                if (!isShown) {
+                    menu.classList.add('show');
+                }
+            }
+        } else {
+            // Close all dropdowns when clicking outside
+            document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
+        }
+    });
 });
 
 // Export for use in other scripts
